@@ -1,0 +1,19 @@
+.footer {
+	padding: rem(50) rem(40);
+
+	@include mq("tablet-small", max) {
+		padding: rem(25) 0;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@include mq("tablet-small", max) {
+			justify-content: center;
+		}
+	}
+
+}

@@ -1,0 +1,64 @@
+.clients {
+	background-color: $bgsection;
+
+	&__container {}
+
+	&__suptitle {}
+
+	&__title {}
+
+	&__slider {}
+}
+
+.slider-clients {
+	&__slide {
+		width: auto;
+		margin: 0 0 rem(120) 0;
+	}
+
+	&__pagination {
+		bottom: 0;
+		text-align: left;
+
+		@include mq("tablet", max) {
+			text-align: center;
+		}
+
+		& .swiper-pagination-bullet {
+			width: rem(10);
+			height: rem(10);
+			background-color: $blue;
+
+			&-active {
+				cursor: auto;
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__control {
+		display: flex;
+		justify-content: end;
+	}
+
+	&__btn {
+		width: rem(60);
+		height: rem(60);
+		background-color: rgba($color: $blue, $alpha: 0.8);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($color: $blue, $alpha: 1);
+				cursor: pointer;
+			}
+		}
+
+		@include mq("tablet", max) {
+			display: none;
+		}
+	}
+}

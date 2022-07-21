@@ -1,0 +1,22 @@
+section.contact#contact(style="background-image: url(./img/Contact/contact-bg.jpg);")
+	.contact__container
+		.contact__block
+			h2.contact__title.page-title Связь с&nbsp;нами
+			p.contact__subtitle У&nbsp;вас остались вопросы? Напишите нам&nbsp;&mdash; мы&nbsp;ответим в&nbsp;ближайшее время!
+			a.contact__connect.phone(href="tel:71112223344") +7 (111) 222-33-44
+			a.contact__connect.mail(href="mailto:order@bu-one.ru") order@bu-one.ru
+		.contact__block
+			form.contact__form-register.register-form(action="https://my-json-server.typicode.com/typicode/demoosts" method="POST" enctype="multipart-data" novalidate)
+				.register-form__box-input
+					.register-form__field
+						input.register-form__input#name(type="text" name="name" value="" placeholder="Иван" required)
+						.register-form__field-message
+						label.register-form__label(for="name") Имя
+					.register-form__field
+						input.register-form__input#surname(type="text" name="surname" value="" placeholder="Иванов" required)
+						.register-form__field-message
+						label.register-form__label(for="surname") Фамилия
+				.register-form__field-textarea
+					textarea.register-form__textarea#message(name="text" value="" placeholder="Ваше сообщение")
+					label.register-form__label(for="message") Сообщение
+				button.register-form__btn.page-link(type="submit") Отправить сообщение

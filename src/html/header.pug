@@ -1,0 +1,29 @@
+header.header#header
+	.header__container
+		a.header__logo.logo(href="./index.html")
+			svg.logo__icon
+				use(xlink:href="#logo")
+		nav.header__menu.menu
+			button.menu__icon(type="button", aria-label="Open menu")
+				span
+			.menu__body
+				ul.menu__list.top-menu
+					li.top-menu__item._icon-phone
+						a.top-menu__link(href="tel:81112223344") 8 (111) 222-33-44
+					li.top-menu__item._icon-clock
+						a.top-menu__link Пн-Пт 10:00-18:00
+					li.top-menu__item._icon-mail
+						a.top-menu__link(href="mailto:order@buhone.ru") order@buhone.ru
+					li.top-menu__item._icon-gps
+						a.top-menu__link(href="https://goo.gl/maps/vrZeHkVaxsmUVBYBA" target="_blank" title="Открыть адресс на карте") Невский пр. 130
+				ul.menu__list
+					li.menu__item
+						a.menu__link(data-goto=".intro" href="#") Главная
+					li.menu__item
+						a.menu__link(data-goto=".services" href="#") Услуги
+					li.menu__item
+						a.menu__link(data-goto=".clients" href="#") Кейсы
+					li.menu__item
+						a.menu__link(data-goto=".about" href="#") О компании
+					li.menu__item
+						a.menu__link(data-goto=".contact" href="#") Контакты

@@ -1,0 +1,98 @@
+.about {
+	&__container {
+		display: flex;
+		gap: rem(30);
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+		}
+	}
+
+	&__info {
+		margin: 0 0 rem(20) 0;
+		flex: 1 1 50%;
+	}
+
+	&__suptitle {
+		margin: 0 0 rem(40) 0;
+	}
+
+	&__title {
+		width: calc(100% /1.5);
+		margin: 0 0 rem(60) 0;
+
+		& span {
+			color: $blue;
+		}
+	}
+
+	&__text {
+		@include font-source-sans(rem(18), 1.4, 300, $black);
+	}
+
+	&__block {
+		flex: 1 1 50%;
+		margin: 0 rem(-15) rem(-30);
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		flex: 1 1 50%;
+		padding: 0 rem(15);
+		margin: 0 0 rem(30) 0;
+
+		@include mq("tablet-small", max) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__item {}
+}
+
+.item-about {
+	padding: rem(40);
+	background-color: $bgsection;
+	transition: all 0.5s linear;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $blue;
+			color: $white;
+
+			.item-about__title,
+			.item-about__text,
+			.item-about__link {
+				color: $white;
+			}
+		}
+	}
+
+	@include mq("tablet-small", max) {
+		padding: rem(25);
+		display: flex;
+		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__title {
+		@include font-source-sans(rem(55), 1.2, 900, $black);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		margin: 0 0 rem(30) 0;
+	}
+
+	&__text {
+		width: calc(100% / 1.5);
+		@include font-source-sans(rem(14), 1.3, 700, $black);
+		margin: 0 0 rem(45) 0;
+	}
+
+	&__link {
+		@include font-source-sans(rem(14), 1.2, 700, $blue);
+		text-decoration-line: underline;
+	}
+}

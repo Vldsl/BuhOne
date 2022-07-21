@@ -1,0 +1,115 @@
+/*** Intro ***/
+.intro {
+	// height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include mq("desktop-wide") {
+		padding: rem(200) 0 rem(150) 0;
+	}
+
+	@include mq("tablet", range, "desktop-wide") {
+		padding: rem(150) 0 rem(100) 0;
+	}
+
+	@include mq("tablet", max) {
+		padding: rem(100) 0 rem(50) 0;
+	}
+
+	// @include mq("tablet-small", max) {
+	// 	padding: rem(65) 0;
+	// }
+
+	&__container {}
+
+	&__slider {}
+}
+
+.slider-intro {
+	&__body {}
+
+	&__slide {
+		margin-bottom: 10.8%;
+
+		@include mq("tablet-small", max) {
+			margin-bottom: 10rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 7.2%;
+		width: calc(100%/1.6);
+		font-family: $fontSecondary;
+		@include font-source-sans(rem(48), 1.375, 700, $white);
+
+		@include mq("tablet-small", max) {
+			margin-bottom: 12.5%;
+			width: 100%;
+		}
+
+		@include mq("phone-wide", max) {
+			font-size: rem(32);
+		}
+	}
+
+	&__link {
+		@include mq("tablet-small", max) {
+			display: block;
+		}
+	}
+
+	&__pagination {
+		bottom: 0;
+		text-align: left;
+
+		@include mq("tablet-small", max) {
+			text-align: center;
+			bottom: 10px;
+		}
+
+		& .swiper-pagination-bullet {
+			width: rem(10);
+			height: rem(10);
+			background-color: $white;
+
+			&-active {
+				cursor: auto;
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__control {
+		display: flex;
+		justify-content: end;
+	}
+
+	&__btn {
+		width: rem(60);
+		height: rem(60);
+		background-color: rgba($color: $white, $alpha: 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($color: $white, $alpha: 0.4);
+				cursor: pointer;
+			}
+		}
+
+		@include mq("phone-wide", max) {
+			display: none;
+		}
+	}
+}

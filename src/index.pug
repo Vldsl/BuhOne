@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+	head
+	@@include('html/head.pug', {
+		"title": "BuhOne"
+	})
+	body(style="background-color: #fff;")
+		include html/sprite
+		.wrapper
+			include html/header
+			main.page
+				include html/intro
+				include html/services
+				include html/about
+				include html/clients
+				include html/reviews
+				include html/contact
+			include html/footer
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+		script(src="js/app.min.js")
+
+//- Доработать валидатор, добавить ограничение по количеству символов
